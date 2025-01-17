@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Sembunyikan scroll horizontal */
+}
+
+html {
+  scroll-behavior: smooth; /* Membuat scroll halus */
+}
+
+/* Canvas styling */
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Navbar styling */
+nav {
+  position: fixed;
+  height: 50px;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 70%;
+  padding: 10px 20px;
+  border-radius: 40px;
+  z-index: 10;
+  background-color: #171616c3;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+  display: flex;
+}
+
+.navbar-container a {
+  color: rgb(197, 197, 197);
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-container a:hover { 
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.navbar-container a.active {
+  color: #00f7ff;
+  font-weight: bold;
+  border-bottom: 2px solid #00f7ff;
+}
+
+.logo-container {
+  font-size: 1.7rem;
+  color: rgb(255, 255, 255);
+  margin-right: 40px;
+}
+
+  /* CONTENT CONTAINER */
+  .content-container {
+    z-index: 5;
+    position: relative;
+    flex: 1;
+    padding: 120px 20px; 
+    overflow-y: auto;
+    color: rgb(255, 255, 255); 
+    min-height: 500px;
+  }
+
+  .wrapper{
+    background-color: #171616c3;
+    height: 450px;
+    border-radius: 30px;
+    display: flex;
+    margin: 60px;
+    padding: 20px;
+  } 
+
+  .hero-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 40px;
+    padding: 0 10%;
+    margin-top: 80px;
+    border-radius: 40px;
+  }
+  
+  .hero-pic img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 238, 255);
+    box-shadow: 0px 0px 45px aqua;
+    transition: transform 0.3s ease;
+    margin-bottom: 70px;
+  }
+  
+  .hero-pic img:hover {
+    transform: scale(1.1);
+  }
+  
+  .hero-text {
+    flex: 1;
+    font-family: Arial, sans-serif;
+    line-height: 30px;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 110px;
+    margin-top: 20px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: left; 
+    gap: 20px; 
+    margin-top: 20px; 
+  }
+  
+  .social-icon {
+    font-size: 2rem; 
+    color: #8c8c8c; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+  }
+  
+  .social-icon:hover {
+    color: #00f7ff; 
+  }
+  .hero-text h5 {
+    font-size: 1.8rem;
+    color: #f1f1f1;
+  }
+  
+  svg{font-weight:bold;
+    max-width:600px;
+    height:auto;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+  }
+  
+  
+  .typewrite-text {
+    color: #9ea3a3; 
+  }
+
+
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    height: 20px; 
+    background-color: #9ea3a3; 
+    margin-left: 5px;
+    animation: blink 0.7s step-end infinite; 
+    z-index: 1;
+  }
+
+  
+  .typewrite {
+    color: #00f7ff; 
+  }
+
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-y: visible; 
+  }
+
+  nav {
+    width: 82%;
+    height: 40px;
+  }
+
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-container a{
+    display: none;
+  }
+  .hero-pic {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-pic img {
+    max-width: 200px;
+    max-height: 200px;
+    position: absolute;
+    margin-bottom: 60vh;
+  }
+
+  .hero-text {
+    margin-top: 15vh;
+    line-height: 1.2rem;
+    flex: 1;
+    text-align: center;
+  }
+
+  svg{
+    font-weight:bold;
+    max-width:300px;
+    height:auto;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .wrapper {
+    background-color: #171616c3;
+    height: 70vh;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    margin: 20px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(280%); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
+  
+  .logo-container {
+    font-size: 1.8rem;
+    color: rgb(0, 238, 255);
+    overflow: hidden; 
+    white-space: nowrap; 
+    position: relative;
+    width: 100%; 
+  }
+  
+  .logo-container ul {
+    display: inline-block;
+    animation: marquee 10s linear infinite; 
+  }
+
+  /* Menambahkan animasi zoom dan perubahan warna saat h2 berada di tengah layar */
+  h2 {
+    font-size: 0.5rem; /* Ukuran teks */
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px); /* Mulai dari posisi lebih rendah */
+    transition: all 0.5s ease-in-out;
+  }
+  
+  h2.animate {
+    opacity: 1; /* Teks akan muncul */
+    transform: translateY(0); /* Bergerak ke posisi semula */
+    font-size: 2rem; /* Membesarkan teks */
+    color: #00f7ff; /* Warna berubah */
+  }
+
+
+}
+
+   /* Aturan untuk ukuran layar laptop (misalnya, di atas 768px) */
+@media (min-width: 769px) {
+  .content-container {
+    height: 100%; /* Pastikan konten memenuhi tinggi layar */
+    display: flex;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h2.animate {
+    font-size: 2.5rem; /* Membesarkan teks lebih besar saat animasi */
+    color: #00f7ff; /* Warna teks animasi */
+  }
+
+}
+     
+  
+
+
+@media (max-width: 480px) {
+  .hero-text h5 {
+    font-size: 15px;
+    color: #f1f1f1;
+  }
+  
+  svg{font-weight:bold;
+    max-width:380px;
+    height:auto;
+  }
+  
+  .hero-text p {
+    font-size: 10px;
+    color: #f1f1f1;
+  }
+  .hero-pic img {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 238, 255);
+    box-shadow: 0px 0px 25px aqua;
+    transition: transform 0.3s ease;
+    margin-bottom: 470px;
+  }
+  .logo-container {
+    font-size: 1.3rem;
+    color: #00f7ff;
+    margin-right: 40px;
+  }
+  .cursor{
+    height: 10px;
+    width: 1px;
+  }
+  .social-icon {
+    font-size: 1.5rem; 
+    color: #8c8c8c; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+  }
+  
+}

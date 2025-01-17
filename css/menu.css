@@ -1,0 +1,256 @@
+.education-history {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  th{
+    font-size: 1.3rem;
+  }
+  .education-history h3 {
+    font-size: 2rem;
+    color: #9a9a9a;
+    margin-bottom: 10px;
+  }
+  
+  .education-history table {
+    width: 50rem;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .education-history table th, 
+  .education-history table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+  }
+  
+  .education-history table th {
+    background-color: #171616c3;
+    color: #00f7ff;
+  }
+  
+  .education-history table tbody tr:hover {
+    background-color: #252525ab;
+  }
+  
+  .education-image{
+    max-width: 100px;
+  }
+
+ 
+  
+
+  @media (max-width: 768px) {
+    .education-history table {
+        max-width: 150vh;
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        padding: 10px;
+        position: relative;
+        padding: 20px;
+      }
+      .education-image{
+        max-width: 70px;
+      }
+
+     
+  }
+
+
+ 
+    .content-container {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .content-container.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+  
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Container untuk skill-wrapper */
+
+  
+/* Kontainer Wrapper Skill */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom di layar besar */
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: hidden;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-icon {
+  width: 250px; 
+  height: 250px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1); /* Efek hover pada gambar */
+}
+
+/* Responsif untuk perangkat dengan ukuran layar kecil (HP atau tablet) */
+@media (max-width: 768px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom saat layar mengecil */
+  }
+
+  .skill-icon {
+    width: 200px; /* Ukuran gambar lebih kecil pada perangkat kecil */
+    height: 200px;
+  }
+}
+
+/* Responsif untuk perangkat dengan ukuran layar sangat kecil (HP) */
+@media (max-width: 480px) {
+  .skills-wrapper {
+    grid-template-columns: 1fr; /* 1 kolom pada perangkat sangat kecil */
+  }
+
+  .skill-icon {
+    width: 110px; /* Ukuran gambar lebih kecil lagi pada perangkat lebih kecil */
+    height: 120px;
+  }
+
+  .education-history table {
+    max-width: 150vh;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+    padding: 20px;
+  }
+  .education-image{
+    max-width: 50px;
+  }
+  th{
+    font-size: 1rem;
+  }
+  .education-history h3 {
+    font-size: 1rem;
+    color: #9a9a9a;
+    margin-bottom: 10px;
+  }
+  td{
+    font-size: 10px;
+  }
+  .skills-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom saat layar mengecil */
+  }
+
+  .skill-icon {
+    width: 140px; /* Ukuran gambar lebih kecil pada perangkat kecil */
+    height: 130px;
+  }
+}
+  
+/* Footer styling */
+.footer {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  margin-top: 40px; /* Memberikan jarak di atas footer */
+}
+
+.footer-box {
+  background-color: #222; /* Latar belakang kotak */
+  padding: 15px 20px;
+  border-radius: 10px; /* Membuat sudut kotak tumpul */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto; /* Ukuran kotak menyesuaikan kontennya */
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #00f7ff; /* Mengubah warna saat hover */
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .footer-box {
+    margin-bottom: 1px;
+    width: 50%; /* Memperlebar kotak di perangkat mobile */
+    padding: 12px;
+    align-items: center;
+  }
+
+  .footer-link {
+    font-size: 0.5rem; /* Menurunkan ukuran font pada layar kecil */
+  }
+
+  .icon {
+    font-size: 1.2rem; /* Menurunkan ukuran ikon pada layar kecil */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-box {
+    margin-bottom: 10px;
+    width: 70%; /* Memperlebar kotak di perangkat mobile */
+    padding: 20px;
+  }
+  .icon {
+    font-size: 1px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+  }
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+}
+
+ 
