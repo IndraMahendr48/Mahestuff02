@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahestuff02</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="img/" type="image/x-icon"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/menu.css">
@@ -67,70 +67,86 @@
     <div id="about" class="content-container">
       <div class="education-history">
         <h3>Education History</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>School</th>
-              <th>Degree</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><img src="img/AL-MUHSIN1.png" alt="SMP Image" class="education-image"></td>
-              <td>Mts Al-muhsin</td>
-              <td>Middle School</td>
-              <td>2018 - 2021</td>
-            </tr>
-            <tr>
-              <td><img src="img/ALkautsar.png" alt="SMA Image" class="education-image"></td>
-              <td>SMA Al-kautsar</td>
-              <td>High School</td>
-              <td>2021 - 2024</td>
-            </tr>
-            <tr>
-              <td><img src="img/telyu.png" alt="University Image" class="education-image"></td>
-              <td>Telkom University</td>
-              <td>Data Science</td>
-              <td>2024 - Present</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="education-container">
+          <div class="education-card">
+            <img src="img/AL-MUHSIN1.png" alt="SMP Image" class="education-image">
+              <div class="wrapp-text">
+                <h4>Mts Al-Muhsin</h4>
+                <p>Middle School</p>
+                <p>2018 - 2021</p>
+              </div>
+          </div>
+          <div class="education-card">
+            <img src="img/ALkautsar.png" alt="SMA Image" class="education-image">
+              <div class="wrapp-text">
+                <h4>SMA Al-Kautsar</h4>
+                <p>High School</p>
+                <p>2021 - 2024</p>
+              </div>
+          </div>
+          <div class="education-card">
+            <img src="img/telyu.png" alt="University Image" class="education-image">
+             <div class="wrapp-text">
+                <h4>Telkom University</h4>
+                <p>Data Science</p>
+                <p>2024 - Present</p>
+              </div>
+          </div>
+        </div>
+      </div>      
     </div>
     
     <div id="skills" class="content-container">
-      <h3 class="mobile-title">Skills</h3> <!-- Tambahkan ini -->
-      <div class="skills-wrapper">
-        <div class="skill">
-          <img src="img/file_type_html_icon_130541.png" alt="HTML Logo" class="skill-icon">
+      <h3 class="mobile-title">Skills</h3>
+      <div class="portfolio-cards">
+        <div class="card">
+          <!-- Card 1: UI/UX Design -->
+          <div class="card-icon">
+            <img src="img/ux-design.png" alt="UI/UX Icon">
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>
+            I provide professional UI/UX design services focused on intuitive, aesthetic, and functional user interfaces.
+          I ensure designs that are visually appealing and effective in achieving your business goals for websites, mobile applications, and other digital platforms.
+          </p>
+          <button class="contact-btn"><a href="tel:+6285832284300">Contact me</a></button>
         </div>
-        <div class="skill">
-          <img src="img/file_type_css_icon_130661.png" alt="CSS Logo" class="skill-icon">
+        <div class="card">
+          <!-- Card 2: Graphic Design -->
+          <div class="card-icon">
+            <img src="img/grapik.png" alt="Graphic Design Icon">
+          </div>
+          <h3>Graphic Design</h3>
+          <p>
+            I provide creative graphic design services that will bring your ideas to life into stunning visual masterpieces.
+            I ensure each design is not only aesthetic, but also effective in conveying a message, helping you build a strong and memorable visual identity.
+          </p>
+          <button class="contact-btn"><a href="tel:+6285832284300">Contact me</a></button>
         </div>
-        <div class="skill">
-          <img src="img/javascript-icon-transparent.png" alt="JavaScript Logo" class="skill-icon">
-        </div>
-        <div class="skill">
-          <img src="img/figma_logo_icon_147289.png" alt="Figma Logo" class="skill-icon">
+        <div class="card">
+          <!-- Card 3: Frontend Development -->
+          <div class="card-icon">
+            <img src="img/visual-code.png" alt="Frontend Development Icon">
+          </div>
+          <h3>Frontend Dev</h3>
+          <p>
+            I offer frontend development services that focus on creating attractive and responsive user interfaces.
+            With expertise in HTML, CSS, and JavaScript, I ensure every project not only looks great but also functions well across a variety of devices and browsers.
+          </p>
+          <button class="contact-btn"><a href="tel:+6285832284300">Contact me</a></button>
         </div>
       </div>
     </div>
     
     <div id="contact" class="content-container">
-      <h3 class="mobile-title">Contact</h3> <!-- Tambahkan ini -->
       <footer class="footer">
-        <div class="footer-box">
-          <i class="fas fa-phone-alt icon"></i>
-          <a href="tel:+6281234567890" class="footer-link"><strong>+62 85832284300</strong></a>
-        </div>
-        <div class="footer-box">
-          <i class="fas fa-envelope icon"></i>
-          <a href="mailto:contact@example.com" class="footer-link"><strong>mahestuff02@gmail.com</strong></a>
-        </div>
+        <h2 class="footer-end">Connect Me</h2>
+        <h4>Feel free to get in touch with me whenever you need assistance or want to discuss anything. I'm here to help you with pleasure!🚀
+        </h4>
       </footer>
     </div>
+    
+  
 
   <!-- The canvas element for the particle wave -->
   <canvas id="myCanvas"></canvas>
