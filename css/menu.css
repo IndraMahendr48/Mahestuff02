@@ -1,65 +1,82 @@
 .education-history {
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.education-history h3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.education-card {
+  overflow: hidden; 
+  text-align: center;
+  padding: 55px;
+  width: calc(33.333% - 20px); 
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+}
+
+.education-image {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.education-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.education-card p {
+  margin: 5px 0;
+  color: #9c9b9b;
+  font-size: 0.95rem;
+}
+
+
+@media (max-width: 992px) {
+  .education-card {
+    width: calc(50% - 20px);
   }
-  th{
-    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    width: calc(100% - 15px); 
+  }
+  .education-image {
+    max-height: 180px; 
+  }
+  .education-card h4 {
+    font-size: 1.3rem; 
+  }
+  .education-card p {
+    font-size: 0.9rem; 
+    margin: 3px 0;
+  }
+  .education-container {
+    gap: 5px; 
   }
   .education-history h3 {
-    font-size: 2rem;
-    color: #9a9a9a;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
   }
-  
-  .education-history table {
-    width: 50rem;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  .education-history table th, 
-  .education-history table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    color: #fff;
-  }
-  
-  .education-history table th {
-    background-color: #171616c3;
-    color: #00f7ff;
-  }
-  
-  .education-history table tbody tr:hover {
-    background-color: #252525ab;
-  }
-  
-  .education-image{
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-  }
-
- 
-  
-
-  @media (max-width: 768px) {
-    .education-history table {
-        max-width: 150vh;
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-        padding: 10px;
-        position: relative;
-        padding: 20px;
-      }
-      .education-image{
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-      }
-  }
-
+}
 
  
     .content-container {
@@ -86,176 +103,53 @@
     }
   }
   
-  /* Container untuk skill-wrapper */
 
   
-/* Kontainer Wrapper Skill */
-.skills-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 kolom di layar besar */
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  overflow-x: hidden;
-  width: 100%;
-  overflow-y: hidden;
-}
 
-.skill {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.skill-icon {
-  width: 250px; 
-  height: 250px;
-  transition: transform 0.3s ease;
-  object-fit: contain;
-}
-
-.skill-icon:hover {
-  transform: scale(1.1); /* Efek hover pada gambar */
-}
-
-/* Responsif untuk perangkat dengan ukuran layar kecil (HP atau tablet) */
-@media (max-width: 768px) {
-  .skills-wrapper {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom saat layar mengecil */
-  }
-
-  .skill-icon {
-    width: 200px; /* Ukuran gambar lebih kecil pada perangkat kecil */
-    height: 200px;
-  }
-}
-
-/* Responsif untuk perangkat dengan ukuran layar sangat kecil (HP) */
-@media (max-width: 480px) {
-  .skills-wrapper {
-    grid-template-columns: 1fr; /* 1 kolom pada perangkat sangat kecil */
-  }
-
-  .skill-icon {
-    width: 110px; /* Ukuran gambar lebih kecil lagi pada perangkat lebih kecil */
-    height: 120px;
-  }
-
-  .education-history table {
-    max-width: 150vh;
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    padding: 10px;
-    position: relative;
-    padding: 20px;
-  }
-  .education-image{
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-  }
-  th{
-    font-size: 1rem;
-  }
-  .education-history h3 {
-    font-size: 1rem;
-    color: #9a9a9a;
-    margin-bottom: 10px;
-  }
-  td{
-    font-size: 10px;
-  }
-  .skills-wrapper {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom saat layar mengecil */
-  }
-
-  .skill-icon {
-    width: 140px; /* Ukuran gambar lebih kecil pada perangkat kecil */
-    height: 130px;
-  }
-}
   
 /* Footer styling */
 .footer {
-  color: #fff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   gap: 20px;
   padding: 20px;
   position: relative;
-  margin-top: 40px; /* Memberikan jarak di atas footer */
+  margin-top: 40px; 
+  background-color: #5857574f;
+  border-radius: 20px;
+  width: 50%;
+  height: fit-content;
+  font-family: sans-serif;
 }
 
-.footer-box {
-  background-color: #222; /* Latar belakang kotak */
-  padding: 15px 20px;
-  border-radius: 10px; /* Membuat sudut kotak tumpul */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: auto; /* Ukuran kotak menyesuaikan kontennya */
+
+.footer h2{
+ color: #edeaea;
 }
 
-.footer-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.footer-link:hover {
-  color: #00f7ff; /* Mengubah warna saat hover */
-}
-
-.icon {
-  font-size: 1.5rem;
+.footer h4{
+  font-size: 20px;
+  color: #9a9999;
+  text-align: center;
 }
 
 @media (max-width: 480px) {
-  .footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 10px;
-  }
+   .footer h4{
+     font-size: 15px;
+     text-align: center;
+   }
 
-  .footer-box {
-    margin-bottom: 1px;
-    width: 50%; /* Memperlebar kotak di perangkat mobile */
-    padding: 12px;
-    align-items: center;
-  }
-
-  .footer-link {
-    font-size: 0.5rem; /* Menurunkan ukuran font pada layar kecil */
-  }
-
-  .icon {
-    font-size: 1.2rem; /* Menurunkan ukuran ikon pada layar kecil */
-  }
-}
-
-
-@media (max-width: 768px) {
-  .footer-box {
-    margin-bottom: 10px;
-    width: 70%; /* Memperlebar kotak di perangkat mobile */
-    padding: 20px;
-  }
-  .icon {
-    font-size: 13px;
-    align-items: center;
+   .footer{
+    width: 90%;
     justify-content: center;
-    float: left;
-  }
-  .footer-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
+   }
 }
+
+
+
+
 .mobile-title {
   display: none; /* Default: sembunyikan */
   text-align: center;
@@ -277,4 +171,191 @@
   }
   
 }
- 
+
+.portfolio-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* Card Styles */
+.card {
+  background-color: #222223d4;
+  border-radius: 15px;
+  padding: 60px 20px;
+  height: fit-content;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Card Icon */
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00d4ff;
+}
+
+/* Card Title */
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.contact-btn {
+  background-color: #00d4ff;
+  border: none;
+  color: #0d0d1f;
+  padding: 10px 20px;
+  font-size: bold 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(26, 101, 145, 0.8);
+}
+.contact-btn a{
+  text-decoration: none;
+  color: #0d0d1f;
+}
+.contact-btn:hover {
+  background-color: #00a8cc;
+}
+
+
+@media (max-width: 480px) {
+  .portfolio-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: #222223d4;
+    border-radius: 15px;
+    padding: 20px 20px;
+    height: fit-content;
+    width: 100px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-icon {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    color: #00d4ff;
+  }
+  
+  /* Card Title */
+  .card h3 {
+    font-size: 0.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Card Description */
+  .card p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  .contact-btn {
+    background-color: #00d4ff;
+    border: none;
+    color: #0d0d1f;
+    padding: 5px 10px;
+    font-size: 0.4rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 8px 15px rgba(26, 101, 145, 0.8);
+  }
+  
+}
+
+@media (max-width: 780px) {
+  .portfolio-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .card {
+    background-color: #222223d4;
+    border-radius: 15px;
+    padding: 30px 10px;
+    height: fit-content;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Card Icon */
+  .card-icon {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #00d4ff;
+  }
+  
+  /* Card Title */
+  .card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Card Description */
+  .card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  .contact-btn {
+    background-color: #00d4ff;
+    border: none;
+    color: #0d0d1f;
+    padding: 5px 10px;
+    font-size: 0.6rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 8px 15px rgba(26, 101, 145, 0.8);
+  }
+}
+
+/* Card Icon with Image */
+.card-icon img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px; 
+  background-size: cover; 
+  background-position: center; 
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0) invert(1) sepia(1) saturate(1000%) hue-rotate(115deg);
+}
+
