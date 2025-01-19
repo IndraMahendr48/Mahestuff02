@@ -1,6 +1,6 @@
 .education-history {
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   max-width: 1200px;
   text-align: center;
 }
@@ -31,8 +31,9 @@
 }
 
 .education-image {
-  width: 280px;
+  justify-content: center;
   height: 300px;
+  width: 280px;
   object-fit: contain;
 }
 
@@ -60,7 +61,7 @@
     width: calc(100% - 15px); 
   }
   .education-image {
-    max-height: 190px; 
+    height: 190px;
     width: 170px;
   }
   .education-card h4 {
