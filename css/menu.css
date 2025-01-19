@@ -78,6 +78,11 @@
   }
 }
 
+@media (max-width: 480px) {
+  .education-image {
+    max-height: 180px; 
+  }
+}
  
     .content-container {
         opacity: 0;
