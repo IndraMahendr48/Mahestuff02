@@ -31,7 +31,7 @@
 }
 
 .education-image {
-  width: 200px;
+  width: 280px;
   height: 300px;
   object-fit: contain;
 }
@@ -60,7 +60,8 @@
     width: calc(100% - 15px); 
   }
   .education-image {
-    max-height: 185px; 
+    max-height: 190px; 
+    width: 170px;
   }
   .education-card h4 {
     font-size: 1.3rem; 
@@ -78,11 +79,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .education-image {
-    max-height: 180px; 
-  }
-}
  
     .content-container {
         opacity: 0;
