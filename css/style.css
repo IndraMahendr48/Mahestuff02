@@ -58,8 +58,6 @@ nav {
 
 .navbar-container a.active {
   color: #00f7ff;
-  font-weight: bold;
-  border-bottom: 2px solid #00f7ff;
 }
 
 .logo-container {
